@@ -63,7 +63,7 @@ git clone https://github.com/Osthanes/deployscripts.git deployscripts
 #   BIND_TO             String       Specify a Bluemix application name.
 #   CONTAINER_SIZE      String       Specify container size: m1.tiny, m1.small, m1.medium, m1.large.
 #                                    Default is m1.tiny.
-#   SSH_KEY             String       Specify ssh key( you can generate ssh key using "ssh-keygen -t rsa -f cloud.key".
+#   SSH_KEY             String       Specify ssh key. you can generate ssh key using "ssh-keygen -t rsa -f cloud.key".
 #                                    uncomment the next line and add with your ssh key.
 #export SSH_KEY="<YOUR SSH-KEY>"
 /bin/bash deployscripts/deploycontainer.sh
