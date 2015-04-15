@@ -61,11 +61,9 @@ git clone https://github.com/Osthanes/deployscripts.git deployscripts
 #      NAME              Value         Description
 #   =============      =========     ==============
 #   BIND_TO             String       Specify a Bluemix application name.
-#   CONTAINER_SIZE      String       Specify container size: m1.tiny, m1.small, m1.medium, m1.large.
-#                                    Default is m1.tiny.
-#   SSH_KEY             String       Specify ssh key. you can generate ssh key using "ssh-keygen -t rsa -f cloud.key".
-#                                    uncomment the next line and add with your ssh key.
-#export SSH_KEY="<YOUR SSH-KEY>"
+#   CONTAINER_SIZE      String       Specify container size: m1.tiny (256), m1.small (512), m1.medium (1024), m1.large (2048).
+#                                    Default is m1.tiny (256).
+#
 /bin/bash deployscripts/deploycontainer.sh
 
 # Deploy Container Group:
@@ -80,8 +78,8 @@ git clone https://github.com/Osthanes/deployscripts.git deployscripts
 #   DESIRED_INSTANCES:  Number       Specify the number of instances in the group.
 #   AUTO_RECOVERY:      Boolean      Set auto-recovery to true/false.
 #                                    Default is false.
-#   CONTAINER_SIZE      String       Specify container size: m1.tiny, m1.small, m1.medium, m1.large.
-#                                    Default is m1.tiny.
+#   CONTAINER_SIZE      String       Specify container size: m1.tiny (256), m1.small (512), m1.medium (1024), m1.large (2048).
+#                                    Default is m1.tiny (256).
 # IF YOU WANT CONTAINER GROUPS .. uncomment the next line, and comment out the previous deployment line (/bin/bash deployscripts/deploygroup.sh)
 #/bin/bash deployscripts/deploygroup.sh
 
