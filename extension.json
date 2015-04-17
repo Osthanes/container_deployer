@@ -54,8 +54,6 @@ git clone https://github.com/Osthanes/deployscripts.git deployscripts
 # You can deploy your Image as either a single Container or as a Container Group.  A Container Group deploys a number of containers which is defined by the GROUP_DESIRED property on the Stage.
 # By default we will deploy as a single container
 
-# You can enter multiple port number separated by commas such as 80,433,22
-
 # Deploy with containers:
 # Optional environment properties:
 #      NAME              Value         Description
