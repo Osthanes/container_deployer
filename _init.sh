@@ -166,7 +166,12 @@ source ${EXT_DIR}/git_util.sh
 ################################
 pushd . >/dev/null
 cd $EXT_DIR 
-git_retry clone https://github.com/Osthanes/utilities.git utilities
+if [ -n "${OVERRIDE_UTILITIES_BRANCH}" ]; then
+    echo "Pulling utilities from branch ${OVERRIDE_UTILITIES_BRANCH}"
+    git_retry clone https://github.com/Osthanes/utilities.git -b "${OVERRIDE_UTILITIES_BRANCH}" utilities
+else
+    git_retry clone https://github.com/Osthanes/utilities.git utilities
+fi
 popd >/dev/null
 
 ################################
