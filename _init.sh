@@ -382,11 +382,10 @@ fi
 ########################
 # Adjust Build Number  #
 ########################
-sudo apt-get install bc > /dev/null 
 if [ -n "$BUILD_OFFSET" ]; then 
     log_and_echo "$INFO" "Using BUILD_OFFSET of $BUILD_OFFSET"
-    export APPLICATION_VERSION=$(echo "$APPLICATION_VERSION + $BUILD_OFFSET" | bc)
-    export BUILD_NUMBER=$(echo "$BUILD_NUMBER + $BUILD_OFFSET" | bc)
+    export APPLICATION_VERSION=$((APPLICATION_VERSION + BUILD_OFFSET))
+    export BUILD_NUMBER=$((BUILD_NUMBER + BUILD_OFFSET))
 fi 
 
 log_and_echo "$LABEL" "Initialization complete"
