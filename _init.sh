@@ -180,6 +180,11 @@ popd >/dev/null
 source ${EXT_DIR}/utilities/ice_utils.sh
 source ${EXT_DIR}/utilities/logging_utils.sh
 
+#################################
+# Show deprecated message       #
+#################################
+log_and_echo "$ERROR" "ATTENTION: This job type has been DEPRECATED. Please use the 'Kubernetes' deploy type instead."
+
 ########################
 # setup deploy property file #
 ########################

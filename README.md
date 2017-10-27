@@ -1,4 +1,4 @@
-# IBM DevOps Services Pipeline Extension for Deployment to IBM Container Service
+# DEPRECATED - IBM DevOps Services Pipeline Extension for Deployment to IBM Container Service
 
 ## Overview
 --------
